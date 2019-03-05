@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .inline-block {
+            display: inline-block
+        }
+        .container-header {
+            border: 1px solid mediumspringgreen;
+            padding: 0px 0px 0px 0px;
+        }
+        .txtbox {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            /* margin-left: 20px; */
+            /* margin-right: 100px; */
+        }
+        .mini-container {
+            background-color: mediumspringgreen;
+            height: 20%;
+            padding-top: 5px;
+            /* margin-bottom: 30px; */
+        }
+    </style>
+    <header>
+        <img class="inline-block" src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="Girl in a jacket" width="80" height="80">
+        <p class="inline-block">ในขั้นตอนที่ 1 ทำการลงทะเบียนก่อน เพื่อรับ <b>ชื่อผู้ใช้</b> และ <b>รหัสผ่าน</b><br>ใช้ในการกรอกใบสมัครขั้นตอนที่ 2</p>
+
+    </header>
+    <br>
+    <div class="mini-container">
+        <h3>ข้อมูลทั่วไป [ภาษาไทย]</h3>
+    </div>
+    <div class="container-header">
+
+        <div style="text-align:right; margin-right:235px; margin-top: 30px;">
+            <u>เลขประจำตัวประชาชน </u>:
+            <input class="" type="text" id="idc" minlenght="13" maxlength="13" size="30" onkeypress="isInputNumber(event)">
+        </div>
+        <u style="padding-left:130px;">คำนำหน้าชื่อ </u>:
+        <select class="txtbox" style="width: 10%" id="gender">
+            <option value=""> </option>
+            <option value="mr">นาย</option>
+            <option value="mrs">นาง</option>
+            <option value="miss">นาวสาว</option>
+        </select>
+        <u style="padding-left:130px;"> ชื่อ </u>:
+        <input class="txtbox" type="text" id="fname" size="35">
+        <u style="padding-left:90px;">นามสกุล </u>:
+        <input class="txtbox" type="text" id="lname" size="35">
+        <br>
+        <u style="padding-left:175px;">ชื่อเล่น</u>:
+        <input class="txtbox" type="text" id="nickname" size="25">
+        <u style="padding-left: 55px; width: 30%">วัน/เดือน/ปีเกิด </u>:
+        <input class="txtbox" type="date" id="bday">
+        <br>
+        <u style="padding-left: 165px;">จังหวัด </u>:
+        <select class="txtbox" style="width: 10%" id="province">
+                <option value="volvo"> </option>
+            <option value="volvo">จังหวัด1</option>
+            <option value="saab">จังหวัด2</option>
+            <option value="mercedes">จังหวัด3</option>
+            <option value="saab">จังหวัด4</option>
+            <option value="mercedes">จังหวัด5</option>
+        </select>
+        <u style="padding-left: 80px;">อำเภอ/เขต </u>:
+        <select class="txtbox" style="width: 10%" id="distric">
+            <option value="volvo"> </option>
+            <option value="volvo">อำเภอ1</option>
+            <option value="saab">อำเภอ2</option>
+            <option value="mercedes">อำเภอ3</option>
+            <option value="saab">อำเภอ4</option>
+            <option value="mercedes">อำเภอ5</option>
+        </select>
+        <u style="padding-left: 160px;">ตำบล </u>:
+        <select class="txtbox" style="width: 10%" id="subdistric">
+            <option value="volvo"> </option>
+            <option value="volvo">ตำบล1</option>
+            <option value="saab">ตำบล2</option>
+            <option value="mercedes">ตำบล3</option>
+            <option value="saab">ตำบล4</option>
+            <option value="mercedes">ตำบล5</option>
+        </select>
+        <br>
+        <u style="padding-left:150px;">บ้านเลขที่ </u>:
+        <input class="txtbox" type="text" size="25" id="homeid">
+        <u style="padding-left:120px;">ถนน </u>:
+        <input class="txtbox" type="text" size="25" id="road">
+        <u style="padding-left:120px;">รหัสไปรษณีย์ </u>:
+        <input class="txtbox" type="text" size="25" maxlength="5" id="postcode" 
+        onkeypress="isInputNumber(event)" >
+        <br>
+        <u style="padding-left:150px;">โทรศัพท์ </u>:
+        <input class="txtbox" type="text" id="htel" size="25" maxlength="9"
+        onkeypress="isInputNumber(event)">
+        <u style="padding-left:100px;">โทรสาร </u>:
+        <input class="txtbox" type="text" id="ftel" size="25" maxlength="9"
+        onkeypress="isInputNumber(event)">
+        <u style="padding-left:120px;">โทรศัพท์มือถือ </u>:
+        <input class="txtbox" type="text" id="phtel" size="25" maxlength="10"
+        onkeypress="isInputNumber(event)">
+        <br>
+        <u style="padding-left:170px;">อีเมล </u>:
+        <input class="txtbox" type="email" id="email" size="85">
+        <div class="mini-container">
+                <h3>ข้อมูลทั่วไป [ภาษาอังกฤษ]</h3>
+        </div>
+        <u style="padding-left:130px;">Prefix </u>:
+        <select class="txtbox" style="width: 10%" id="prefix">
+            <option value=""> </option>
+            <option value="mr">Mr.</option>
+            <option value="mrs">Mrs.</option>
+            <option value="miss">Miss</option>
+        </select>
+        <u style="padding-left:130px;"> Firstname </u>:
+        <input class="txtbox" type="text" id="efname" size="35">
+        <u style="padding-left:90px;">Lastname </u>:
+        <input class="txtbox" type="text" id="elname" size="35">
+        <div class="mini-container" style="height: 50px;">
+                <div style="text-align: right">
+                    <button id="submit" style="width: 120px; padding: 10px 0px 10px 0px; margin-right: 30px; border: 1px solid black;">บันทึก</button>
+                    <button id="cancel" style="width: 120px; padding: 10px 0px 10px 0px; margin-right: 30px; border: 1px solid black;">ยกเลิก</button>
+                </div>
+        </div>
+    </div>
+    
+    <div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        function isInputNumber(evt) {
+            var str = String.fromCharCode(evt.which);
+            if(!(/[0-9]/.test(str))){
+                evt.preventDefault();
+                alert("input only number")
+            }
+        }
+    </script>
+</body>
+
+</html>
